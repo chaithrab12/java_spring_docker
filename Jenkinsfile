@@ -33,10 +33,6 @@ pipeline{
            docker run -p 8880:880 javaspringapp
            
            '''
-        }  
-      } 
-    }
-  
-  }
-
+       }  
+    } 
 }
