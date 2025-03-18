@@ -4,9 +4,8 @@ pipeline{
     stage('Checkout Code'){
         agent any
         steps{
-            git credentialsId: '', 
-            url: 'https://github.com/chaithrab12/java_spring_docker',
-            branch: 'main' 
+            git url: 'https://github.com/chaithrab12/java_spring_docker',
+            branch: 'dev' 
         }  
       } 
     
