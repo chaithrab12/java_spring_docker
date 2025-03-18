@@ -8,7 +8,7 @@ pipeline{
             branch: 'main' 
         }  
       } 
-    }
+    
     stage('Build'){
        agent {
         docker {
@@ -31,5 +31,6 @@ pipeline{
            
            '''
        }  
-    } 
+    }
+  }
 }
