@@ -1,7 +1,6 @@
 pipeline{
   agent any
   stages{
-
     stage('Checkout Code'){
         steps{
             git credentialsId: '', 
@@ -10,7 +9,6 @@ pipeline{
         }  
       } 
     }
-
     stage('Build'){
        agent {
         docker {
@@ -25,7 +23,6 @@ pipeline{
         }  
       } 
     }
-
     stage('Run App'){
         steps{
            sh '''
