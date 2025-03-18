@@ -1,7 +1,7 @@
 pipeline{
    agent {
     docker {
-      image 'jenkins/agent:jdk17'
+      image 'abhishekf5/maven-abhishek-docker-agent:v1'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.m2:/root/.m2'
     }
   }
