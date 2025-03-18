@@ -1,7 +1,7 @@
 pipeline{
    agent {
     docker {
-      image 'eclipse-temurin:17-jdk-jammy'
+      image 'jenkins/agent:jdk17'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.m2:/root/.m2'
     }
   }
