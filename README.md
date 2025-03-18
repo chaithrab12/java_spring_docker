@@ -9,8 +9,11 @@ A simple spring boot application with GET API for demo.
 # Getting Started:
 * Check java version- we need java 17 or more
 * Build the application
+  
   mvn clean package
+  
 * Run the application
+  
   java -jar target/app.jar
 
 # Dockerfile:
@@ -31,27 +34,22 @@ Dockerfile is the latest one used after optimization to reduce storage, improved
   Additional strategies to further minimize Java application's Docker image size:​
   
   1.Image Selection :
-  
     Your choice of base image has the most significant impact on your final image size.
     I have selected slim image
     
   2.Multi Stage Build :
-  
     Build the application in one stage and copy the build jar to next stage.
     Distroless images contain only the essential components required to run your application, omitting unnecessary OS packages. This minimalism enhances security and reduces 
     image size.
     
   3.Minimize Docker Image Layers :
-  
     Combine the commands whereever possible.
     
   4.Remove Unnecessary Files :
-  
     The .dockerignore file works similarly to .gitignore, letting you exclude files and directories from the Docker build context. This not only speeds up the build process 
     but also prevents unnecessary or sensitive files from being included in your image.
     
   5.RUN mvn clean package -DskipTests :
-  
     This will skip the test for faster build process.
 
   
