@@ -1,8 +1,10 @@
 pipeline{
-  agent none
+    agent {
+          docker { image 'maven:3.8.5-openjdk-17-slim'}
+  }
+  
   stages{
     stage('Checkout Code'){
-        agent any
         steps{
             git url: 'https://github.com/chaithrab12/java_spring_docker',
             branch: 'dev' 
@@ -10,9 +12,6 @@ pipeline{
       } 
     
     stage('Build'){
-       agent {
-        docker { image 'maven:3.8.5-openjdk-17-slim'}
-       } 
         steps{
            sh '''
            echo 'Build docker image'
@@ -23,7 +22,6 @@ pipeline{
       } 
     
     stage('Run App'){
-        agent any
         steps{
            sh '''
            echo 'Run docker container'
