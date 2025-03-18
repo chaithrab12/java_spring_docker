@@ -28,7 +28,7 @@ pipeline{
         steps{
            sh '''
            echo 'Run docker container'
-           docker run -p 8880:880 javaspringapp
+           docker run -p 8880:8880 javaspringapp
            
            '''
        }  
