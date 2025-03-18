@@ -1,6 +1,6 @@
 # java_sping_docker 
 
-A simple spring boot application with GET API for demo.
+A simple spring boot application for demo.
 
 # Requirements:
 * JDK 17
@@ -8,13 +8,19 @@ A simple spring boot application with GET API for demo.
 
 # Getting Started:
 * Check java version- we need java 17 or more
-* Build the application
+* Build the application :
   
   mvn clean package
   
-* Run the application
+* Run the application :
   
   java -jar target/app.jar
+
+* The application will start on :
+
+  http://localhost:8880/api/hello
+
+
 
 # Dockerfile:
 
