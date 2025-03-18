@@ -11,9 +11,8 @@ pipeline{
     
     stage('Build'){
        agent {
-        docker {
-          image 'maven:3.8.5-openjdk-17-slim'
-        }
+        docker { image 'maven:3.8.5-openjdk-17-slim'}
+       } 
         steps{
            sh '''
            echo 'Build docker image'
@@ -22,7 +21,7 @@ pipeline{
            '''
         }  
       } 
-    }
+    
     stage('Run App'){
         steps{
            sh '''
