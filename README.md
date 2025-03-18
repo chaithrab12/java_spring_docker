@@ -13,4 +13,11 @@ A simple spring boot application with GET API for demo.
 * Run the application
   java -jar target/app.jar
 
+#Dockerfile:
+
+* In this dockerfile I have used multi stage build
+* First build the application using mvn clean packages.
+* Second stage copy the build from previous stage and expose, run the application.
+  This will reduce the image size
+
   
