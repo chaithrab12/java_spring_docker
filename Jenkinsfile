@@ -2,6 +2,7 @@ pipeline{
   agent none
   stages{
     stage('Checkout Code'){
+        agent any
         steps{
             git credentialsId: '', 
             url: 'https://github.com/chaithrab12/java_spring_docker',
@@ -23,6 +24,7 @@ pipeline{
       } 
     
     stage('Run App'){
+        agent any
         steps{
            sh '''
            echo 'Run docker container'
