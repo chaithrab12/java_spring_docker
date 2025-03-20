@@ -57,5 +57,18 @@ Dockerfile is the latest one used after optimization to reduce storage, improved
     
   5.RUN mvn clean package -DskipTests :
     This will skip the test for faster build process.
+# Important Note:
+Pros of Using docker run in Jenkins for Testing
+  * Clean Environment:
+   Each build runs in an isolated container, avoiding dependency conflicts.
+  * Consistency:
+    Ensures tests run in the same environment every time.
+  * Fast Rollbacks:
+    Easily discard the container if something fails.
+  * Resource Control:
+    Container limits can prevent memory/CPU overload.
+  * Portability:
+    The same image can be tested locally or in different environments.
 
-  
+  The script is for demo/testing only and should not be used as-is in production.
+    
