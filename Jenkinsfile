@@ -26,6 +26,7 @@ pipeline{
     
     stage('Run App'){
         steps{
+           # Note: This is for testing purposes only; containers are not stopped automatically.
            sh '''
            echo 'Run docker container'
            docker run -p 8880:8880 javaspringapp
