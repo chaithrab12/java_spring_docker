@@ -1,6 +1,6 @@
 # java_sping_docker 
 
-A simple spring boot application for demo.
+A simple spring boot application automated the deployment using Jenkins and docker.
 
 # Requirements:
 * JDK 17
